@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WindowsFormsControlLibrary1
@@ -20,6 +13,19 @@ namespace WindowsFormsControlLibrary1
         private void button1_Click(object sender, EventArgs e)
         {
             MessageBox.Show("¡Hola mundo!");
+        }
+
+        private void SSPP21b_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            CLapiz MiLapiz; //Declaración de la variable.
+            MiLapiz = new CLapiz(); //Se construye un objeto, o instancia, de clase CLapiz.
+            MessageBox.Show(MiLapiz.Identificar());
+            MiLapiz.Trazar(4); //Se usa el objeto o instancia.
         }
     }
 }
