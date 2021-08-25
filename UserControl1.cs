@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace WindowsFormsControlLibrary1
+namespace SSPP21B
 {
     public partial class SSPP21b: UserControl
     {

@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace WindowsFormsControlLibrary1
+namespace SSPP21B
 {
     //---------------------------------------------------------------------
     //Clase que representa un lápiz.
@@ -11,7 +11,7 @@ namespace WindowsFormsControlLibrary1
         //---------------------------------------------------------------------
         //Atributos.
         //---------------------------------------------------------------------
-        public string Color;
+        public CColor Color;
         public string Material;
         public int Tipo;
 
@@ -20,7 +20,7 @@ namespace WindowsFormsControlLibrary1
         //---------------------------------------------------------------------
         public CLapiz()
             {
-            Color = "rojo";
+            Color = new CColor();
             Material = "madera";
             Tipo = 1;
             }
@@ -56,7 +56,7 @@ namespace WindowsFormsControlLibrary1
         //---------------------------------------------------------------------
         public string Identificar()
         {
-            return "Hola, soy un lápiz de " + Material + " de color " + Color + ".";
+            return "Hola, soy un lápiz de " + Material + " de color " + Color.GetColor() + ".";
         }
     }
 }

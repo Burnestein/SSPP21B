@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsControlLibrary1
+﻿namespace SSPP21B
 {
     partial class SSPP21b
     {
