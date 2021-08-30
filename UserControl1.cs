@@ -23,9 +23,12 @@ namespace SSPP21B
         private void button2_Click(object sender, EventArgs e)
         {
             CLapiz MiLapiz; //Declaración de la variable.
+
             MiLapiz = new CLapiz(); //Se construye un objeto, o instancia, de clase CLapiz.
             MessageBox.Show(MiLapiz.Identificar());
-            MiLapiz.Trazar(4); //Se usa el objeto o instancia.
+            MessageBox.Show(MiLapiz.Trazar(1)); //Se usa el objeto o instancia.
+
+            BackColor = MiLapiz.GetColor(); //Se pide el color para pintar el fondo de ventana.
         }
     }
 }

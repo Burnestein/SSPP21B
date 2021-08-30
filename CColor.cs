@@ -1,4 +1,6 @@
-﻿namespace SSPP21B
+﻿using System.Drawing;
+
+namespace SSPP21B
 {
     //---------------------------------------------------------------------
     //Clase que representa un color.
@@ -16,21 +18,36 @@
         //---------------------------------------------------------------------
         //Constructor.
         //---------------------------------------------------------------------
-        public CColor()
+        public CColor(int Red, int Green, int Blue)
         {
-            //Por default el objeto se crea en color negro:
 
-            Red = 255;
-            Green = 0;
-            Blue = 0;
+            this.Red = Red;
+            this.Green = Green;
+            this.Blue = Blue;
         }
 
         //---------------------------------------------------------------------
-        //Obtiene el color.
+        //Obtiene el nombre del color.
         //---------------------------------------------------------------------
-        public string GetColor()
+        public string GetNombreColor()
         {
-            return "rojo";
+            Color ColorInterno;
+
+            ColorInterno = Color.FromArgb(Red, Green, Blue);
+
+            return ColorInterno.Name;
+        }
+
+        //---------------------------------------------------------------------
+        //Obtiene el color primitivo.
+        //---------------------------------------------------------------------
+        public Color GetColorPrimitivo()
+        {
+            Color ColorInterno;
+
+            ColorInterno = Color.FromArgb(Red, Green, Blue);
+
+            return ColorInterno;
         }
     }
 }

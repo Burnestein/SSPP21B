@@ -1,4 +1,4 @@
-﻿using System.Windows.Forms;
+﻿using System.Drawing;
 
 namespace SSPP21B
 {
@@ -11,16 +11,16 @@ namespace SSPP21B
         //---------------------------------------------------------------------
         //Atributos.
         //---------------------------------------------------------------------
-        public CColor Color;
-        public string Material;
-        public int Tipo;
+        private CColor Color;
+        private string Material;
+        private int Tipo;
 
         //---------------------------------------------------------------------
         //Constructor.
         //---------------------------------------------------------------------
         public CLapiz()
             {
-            Color = new CColor();
+            Color = new CColor(2, 222, 253);
             Material = "madera";
             Tipo = 1;
             }
@@ -28,27 +28,29 @@ namespace SSPP21B
         //---------------------------------------------------------------------
         //Traza una linea.
         //---------------------------------------------------------------------
-        public void Trazar(int TipoTrazo)
+        public string Trazar(int TipoTrazo)
         {
-            string Tipo;
+            string TipoCadena;
 
-            switch (TipoTrazo)
+            Tipo = TipoTrazo;
+
+            switch (Tipo)
             {
                 case 1:
-                    Tipo = "dibujo";
+                    TipoCadena = "dibujo";
                     break;
                 case 2:
-                    Tipo = "profesional";
+                    TipoCadena = "profesional";
                     break;
                 case 3:
-                    Tipo = "escolar";
+                    TipoCadena = "escolar";
                     break;
                 default:
-                    Tipo = "desconocido";
+                    TipoCadena = "desconocido";
                     break;
             }
 
-            MessageBox.Show("Estoy trazando, soy un lápiz de tipo " + Tipo + ".");
+            return "Estoy trazando, soy un lápiz de tipo " + TipoCadena + ".";
         }
 
         //---------------------------------------------------------------------
@@ -56,7 +58,15 @@ namespace SSPP21B
         //---------------------------------------------------------------------
         public string Identificar()
         {
-            return "Hola, soy un lápiz de " + Material + " de color " + Color.GetColor() + ".";
+            return "Hola, soy un lápiz de " + Material + " de color " + Color.GetNombreColor() + ".";
+        }
+
+        //---------------------------------------------------------------------
+        //Obtiene el color del lápiz.
+        //---------------------------------------------------------------------
+        public Color GetColor()
+        {
+            return Color.GetColorPrimitivo();
         }
     }
 }
