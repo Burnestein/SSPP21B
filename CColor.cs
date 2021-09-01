@@ -18,6 +18,17 @@ namespace SSPP21B
         //---------------------------------------------------------------------
         //Constructor.
         //---------------------------------------------------------------------
+        public CColor()
+        {
+
+            Red = -1;
+            Green = -1;
+            Blue = -1;
+        }
+
+        //---------------------------------------------------------------------
+        //Constructor.
+        //---------------------------------------------------------------------
         public CColor(int Red, int Green, int Blue)
         {
 
@@ -26,6 +37,20 @@ namespace SSPP21B
             this.Blue = Blue;
         }
 
+        //---------------------------------------------------------------------
+        //Constructor.
+        //---------------------------------------------------------------------
+        public CColor(string NombreColor) //sobrecarga del objeto.
+        {
+            Color ColorInterno;
+
+            ColorInterno = Color.FromName(NombreColor);
+
+            Red = ColorInterno.R;
+            Green = ColorInterno.G;
+            Blue = ColorInterno.B;
+        }
+        
         //---------------------------------------------------------------------
         //Obtiene el nombre del color.
         //---------------------------------------------------------------------

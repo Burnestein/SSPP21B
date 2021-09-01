@@ -18,11 +18,11 @@ namespace SSPP21B
         //---------------------------------------------------------------------
         //Constructor.
         //---------------------------------------------------------------------
-        public CLapiz()
+        public CLapiz(string NombreColor, string Material, int Tipo)
             {
-            Color = new CColor(2, 222, 253);
-            Material = "madera";
-            Tipo = 1;
+                Color = new CColor(NombreColor);
+                this.Material = Material;
+                this.Tipo = Tipo;
             }
 
         //---------------------------------------------------------------------
