@@ -1,6 +1,6 @@
 ﻿namespace SSPP21B
 {
-    partial class SSPP21b
+    partial class DlgPracticas
     {
         /// <summary>
         /// Required designer variable.
@@ -33,6 +33,7 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -506,19 +507,30 @@
             this.comboBox3.Size = new System.Drawing.Size(281, 24);
             this.comboBox3.TabIndex = 4;
             // 
-            // SSPP21b
+            // button3
+            // 
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.Location = new System.Drawing.Point(307, 119);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(280, 91);
+            this.button3.TabIndex = 5;
+            this.button3.Text = "Crea Ventana";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // DlgPracticas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Name = "SSPP21b";
+            this.Name = "DlgPracticas";
             this.Size = new System.Drawing.Size(800, 450);
-            this.Load += new System.EventHandler(this.SSPP21b_Load);
             this.ResumeLayout(false);
 
         }
@@ -530,5 +542,6 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Button button3;
     }
 }
