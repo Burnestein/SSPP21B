@@ -23,7 +23,10 @@ namespace SSPP21B
         //---------------------------------------------------------------------
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("¡Hola mundo!");
+            DlgProyectoFinal VentanaPF;
+
+            VentanaPF = new DlgProyectoFinal();
+            VentanaPF.Show();
         }
 
         //---------------------------------------------------------------------
