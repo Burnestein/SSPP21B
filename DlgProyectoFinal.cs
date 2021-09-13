@@ -29,5 +29,10 @@ namespace WindowsFormsControlLibrary1
         {
 
         }
+
+        private void tabPage1_Click(object sender, System.EventArgs e)
+        {
+
+        }
     }
 }
