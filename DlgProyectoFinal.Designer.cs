@@ -30,372 +30,462 @@ namespace WindowsFormsControlLibrary1
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DlgProyectoFinal));
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nuevoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.guardarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.verToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.menuStrip1.SuspendLayout();
-            this.statusStrip1.SuspendLayout();
-            this.toolStrip1.SuspendLayout();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.MstPrincipal = new System.Windows.Forms.MenuStrip();
+            this.MitArchivo = new System.Windows.Forms.ToolStripMenuItem();
+            this.MitNuevo = new System.Windows.Forms.ToolStripMenuItem();
+            this.MitGuardar = new System.Windows.Forms.ToolStripMenuItem();
+            this.MitEditar = new System.Windows.Forms.ToolStripMenuItem();
+            this.MitVer = new System.Windows.Forms.ToolStripMenuItem();
+            this.MitAyuda = new System.Windows.Forms.ToolStripMenuItem();
+            this.SstEstado = new System.Windows.Forms.StatusStrip();
+            this.TsslProyecto = new System.Windows.Forms.ToolStripStatusLabel();
+            this.TstPrincipal = new System.Windows.Forms.ToolStrip();
+            this.TsbNuevo = new System.Windows.Forms.ToolStripButton();
+            this.Tss1 = new System.Windows.Forms.ToolStripSeparator();
+            this.TsbGuardar = new System.Windows.Forms.ToolStripButton();
+            this.Tss2 = new System.Windows.Forms.ToolStripSeparator();
+            this.TsbEliminar = new System.Windows.Forms.ToolStripButton();
+            this.Tss3 = new System.Windows.Forms.ToolStripSeparator();
+            this.TsbCerrar = new System.Windows.Forms.ToolStripButton();
+            this.Tss4 = new System.Windows.Forms.ToolStripSeparator();
+            this.PnlFotografia = new System.Windows.Forms.Panel();
+            this.TbcPrincipal = new System.Windows.Forms.TabControl();
+            this.TpgClientes = new System.Windows.Forms.TabPage();
+            this.LblEstadoCivil = new System.Windows.Forms.Label();
+            this.CbxEstadoCivil = new System.Windows.Forms.ComboBox();
+            this.TbxLugarProcedencia = new System.Windows.Forms.TextBox();
+            this.LblLugarProcedencia = new System.Windows.Forms.Label();
+            this.TbxFechaNacimiento = new System.Windows.Forms.TextBox();
+            this.LblFechaNacimiento = new System.Windows.Forms.Label();
+            this.TbxCodigo = new System.Windows.Forms.TextBox();
+            this.LblCodigo = new System.Windows.Forms.Label();
+            this.TbxApellidoM = new System.Windows.Forms.TextBox();
+            this.TbxCorreo = new System.Windows.Forms.TextBox();
+            this.LblCorreo = new System.Windows.Forms.Label();
+            this.TbxTelefonoMovil = new System.Windows.Forms.TextBox();
+            this.LblTelefonoMovil = new System.Windows.Forms.Label();
+            this.LblApellidoM = new System.Windows.Forms.Label();
+            this.TbxApellidoP = new System.Windows.Forms.TextBox();
+            this.LblApellidoP = new System.Windows.Forms.Label();
+            this.TbxNombre = new System.Windows.Forms.TextBox();
+            this.LblNombre = new System.Windows.Forms.Label();
+            this.PbxFondoClientes = new System.Windows.Forms.PictureBox();
+            this.TpgReservaciones = new System.Windows.Forms.TabPage();
+            this.PbxFondoReservaciones = new System.Windows.Forms.PictureBox();
+            this.TpgInventario = new System.Windows.Forms.TabPage();
+            this.MstPrincipal.SuspendLayout();
+            this.SstEstado.SuspendLayout();
+            this.TstPrincipal.SuspendLayout();
+            this.TbcPrincipal.SuspendLayout();
+            this.TpgClientes.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PbxFondoClientes)).BeginInit();
+            this.TpgReservaciones.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PbxFondoReservaciones)).BeginInit();
             this.SuspendLayout();
             // 
-            // menuStrip1
-            // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.archivoToolStripMenuItem,
-            this.editarToolStripMenuItem,
-            this.verToolStripMenuItem,
-            this.ayudaToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1182, 30);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // archivoToolStripMenuItem
-            // 
-            this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.nuevoToolStripMenuItem,
-            this.guardarToolStripMenuItem});
-            this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
-            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(73, 26);
-            this.archivoToolStripMenuItem.Text = "Archivo";
-            // 
-            // nuevoToolStripMenuItem
-            // 
-            this.nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
-            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(145, 26);
-            this.nuevoToolStripMenuItem.Text = "Nuevo";
-            // 
-            // guardarToolStripMenuItem
-            // 
-            this.guardarToolStripMenuItem.Name = "guardarToolStripMenuItem";
-            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(145, 26);
-            this.guardarToolStripMenuItem.Text = "Guardar";
-            // 
-            // editarToolStripMenuItem
-            // 
-            this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
-            this.editarToolStripMenuItem.Size = new System.Drawing.Size(62, 26);
-            this.editarToolStripMenuItem.Text = "Editar";
-            // 
-            // verToolStripMenuItem
-            // 
-            this.verToolStripMenuItem.Name = "verToolStripMenuItem";
-            this.verToolStripMenuItem.Size = new System.Drawing.Size(44, 26);
-            this.verToolStripMenuItem.Text = "Ver";
-            // 
-            // ayudaToolStripMenuItem
-            // 
-            this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
-            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(65, 26);
-            this.ayudaToolStripMenuItem.Text = "Ayuda";
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.BackColor = System.Drawing.SystemColors.Control;
-            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 747);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1182, 26);
-            this.statusStrip1.TabIndex = 1;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // toolStripStatusLabel1
-            // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(221, 20);
-            this.toolStripStatusLabel1.Text = "Proyecto Final - SSPP21B - NJSA";
-            this.toolStripStatusLabel1.Click += new System.EventHandler(this.toolStripStatusLabel1_Click);
-            // 
-            // toolStrip1
-            // 
-            this.toolStrip1.AutoSize = false;
-            this.toolStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
-            this.toolStripSeparator1,
-            this.toolStripButton2,
-            this.toolStripSeparator2,
-            this.toolStripButton3,
-            this.toolStripSeparator3,
-            this.toolStripButton4,
-            this.toolStripSeparator4});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 30);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1182, 60);
-            this.toolStrip1.TabIndex = 2;
-            this.toolStrip1.Text = "toolStrip1";
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.AutoSize = false;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(136, 60);
-            this.toolStripButton1.Text = "Nuevo";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 60);
-            // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.AutoSize = false;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(150, 60);
-            this.toolStripButton2.Text = "Guardar";
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 60);
-            // 
-            // toolStripButton3
-            // 
-            this.toolStripButton3.AutoSize = false;
-            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(150, 60);
-            this.toolStripButton3.Text = "Eliminar";
-            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 60);
-            // 
-            // toolStripButton4
-            // 
-            this.toolStripButton4.AutoSize = false;
-            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
-            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(150, 60);
-            this.toolStripButton4.Text = "Cerrar";
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 60);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 90);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 657);
-            this.panel1.TabIndex = 3;
-            // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.ItemSize = new System.Drawing.Size(150, 35);
-            this.tabControl1.Location = new System.Drawing.Point(200, 90);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(982, 657);
-            this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.tabControl1.TabIndex = 4;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Controls.Add(this.textBox3);
-            this.tabPage1.Controls.Add(this.textBox5);
-            this.tabPage1.Controls.Add(this.label5);
-            this.tabPage1.Controls.Add(this.textBox4);
-            this.tabPage1.Controls.Add(this.label4);
-            this.tabPage1.Controls.Add(this.label3);
-            this.tabPage1.Controls.Add(this.textBox2);
-            this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Controls.Add(this.textBox1);
-            this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Controls.Add(this.pictureBox1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 39);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(974, 614);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Clientes";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.pictureBox2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 39);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(974, 614);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Reservaciones";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 39);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(974, 616);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Inventario";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 388);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(968, 223);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(31, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 17);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Nombre(s)";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(34, 61);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(293, 22);
-            this.textBox1.TabIndex = 2;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(350, 61);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(231, 22);
-            this.textBox2.TabIndex = 4;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.DimGray;
-            this.label2.Location = new System.Drawing.Point(347, 40);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(112, 17);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Apellido Paterno";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(602, 40);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(114, 17);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Apellido Materno";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(34, 120);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(181, 22);
-            this.textBox4.TabIndex = 8;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.DimGray;
-            this.label4.Location = new System.Drawing.Point(31, 99);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(100, 17);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Teléfono Móvil";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(241, 120);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(340, 22);
-            this.textBox5.TabIndex = 10;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.DimGray;
-            this.label5.Location = new System.Drawing.Point(238, 99);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(51, 17);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Correo";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(605, 61);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(231, 22);
-            this.textBox3.TabIndex = 11;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(691, 385);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(200, 200);
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
+            // MstPrincipal
+            // 
+            this.MstPrincipal.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.MstPrincipal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MitArchivo,
+            this.MitEditar,
+            this.MitVer,
+            this.MitAyuda});
+            this.MstPrincipal.Location = new System.Drawing.Point(0, 0);
+            this.MstPrincipal.Name = "MstPrincipal";
+            this.MstPrincipal.Size = new System.Drawing.Size(1182, 28);
+            this.MstPrincipal.TabIndex = 0;
+            this.MstPrincipal.Text = "menuStrip1";
+            // 
+            // MitArchivo
+            // 
+            this.MitArchivo.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MitNuevo,
+            this.MitGuardar});
+            this.MitArchivo.Name = "MitArchivo";
+            this.MitArchivo.Size = new System.Drawing.Size(73, 24);
+            this.MitArchivo.Text = "Archivo";
+            // 
+            // MitNuevo
+            // 
+            this.MitNuevo.Name = "MitNuevo";
+            this.MitNuevo.Size = new System.Drawing.Size(145, 26);
+            this.MitNuevo.Text = "Nuevo";
+            // 
+            // MitGuardar
+            // 
+            this.MitGuardar.Name = "MitGuardar";
+            this.MitGuardar.Size = new System.Drawing.Size(145, 26);
+            this.MitGuardar.Text = "Guardar";
+            // 
+            // MitEditar
+            // 
+            this.MitEditar.Name = "MitEditar";
+            this.MitEditar.Size = new System.Drawing.Size(62, 24);
+            this.MitEditar.Text = "Editar";
+            // 
+            // MitVer
+            // 
+            this.MitVer.Name = "MitVer";
+            this.MitVer.Size = new System.Drawing.Size(44, 24);
+            this.MitVer.Text = "Ver";
+            // 
+            // MitAyuda
+            // 
+            this.MitAyuda.Name = "MitAyuda";
+            this.MitAyuda.Size = new System.Drawing.Size(65, 24);
+            this.MitAyuda.Text = "Ayuda";
+            // 
+            // SstEstado
+            // 
+            this.SstEstado.BackColor = System.Drawing.SystemColors.Control;
+            this.SstEstado.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.SstEstado.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TsslProyecto});
+            this.SstEstado.Location = new System.Drawing.Point(0, 747);
+            this.SstEstado.Name = "SstEstado";
+            this.SstEstado.Size = new System.Drawing.Size(1182, 26);
+            this.SstEstado.TabIndex = 1;
+            this.SstEstado.Text = "statusStrip1";
+            // 
+            // TsslProyecto
+            // 
+            this.TsslProyecto.Name = "TsslProyecto";
+            this.TsslProyecto.Size = new System.Drawing.Size(221, 20);
+            this.TsslProyecto.Text = "Proyecto Final - SSPP21B - NJSA";
+            // 
+            // TstPrincipal
+            // 
+            this.TstPrincipal.AutoSize = false;
+            this.TstPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
+            this.TstPrincipal.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.TstPrincipal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TsbNuevo,
+            this.Tss1,
+            this.TsbGuardar,
+            this.Tss2,
+            this.TsbEliminar,
+            this.Tss3,
+            this.TsbCerrar,
+            this.Tss4});
+            this.TstPrincipal.Location = new System.Drawing.Point(0, 28);
+            this.TstPrincipal.Name = "TstPrincipal";
+            this.TstPrincipal.Size = new System.Drawing.Size(1182, 60);
+            this.TstPrincipal.TabIndex = 2;
+            this.TstPrincipal.Text = "toolStrip1";
+            // 
+            // TsbNuevo
+            // 
+            this.TsbNuevo.AutoSize = false;
+            this.TsbNuevo.Image = ((System.Drawing.Image)(resources.GetObject("TsbNuevo.Image")));
+            this.TsbNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.TsbNuevo.Name = "TsbNuevo";
+            this.TsbNuevo.Size = new System.Drawing.Size(136, 60);
+            this.TsbNuevo.Text = "Nuevo";
+            this.TsbNuevo.Click += new System.EventHandler(this.TsbNuevo_Click);
+            // 
+            // Tss1
+            // 
+            this.Tss1.Name = "Tss1";
+            this.Tss1.Size = new System.Drawing.Size(6, 60);
+            // 
+            // TsbGuardar
+            // 
+            this.TsbGuardar.AutoSize = false;
+            this.TsbGuardar.Image = ((System.Drawing.Image)(resources.GetObject("TsbGuardar.Image")));
+            this.TsbGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.TsbGuardar.Name = "TsbGuardar";
+            this.TsbGuardar.Size = new System.Drawing.Size(150, 60);
+            this.TsbGuardar.Text = "Guardar";
+            this.TsbGuardar.Click += new System.EventHandler(this.TsbGuardar_Click);
+            // 
+            // Tss2
+            // 
+            this.Tss2.Name = "Tss2";
+            this.Tss2.Size = new System.Drawing.Size(6, 60);
+            // 
+            // TsbEliminar
+            // 
+            this.TsbEliminar.AutoSize = false;
+            this.TsbEliminar.Image = ((System.Drawing.Image)(resources.GetObject("TsbEliminar.Image")));
+            this.TsbEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.TsbEliminar.Name = "TsbEliminar";
+            this.TsbEliminar.Size = new System.Drawing.Size(150, 60);
+            this.TsbEliminar.Text = "Eliminar";
+            this.TsbEliminar.Click += new System.EventHandler(this.TsbEliminar_Click);
+            // 
+            // Tss3
+            // 
+            this.Tss3.Name = "Tss3";
+            this.Tss3.Size = new System.Drawing.Size(6, 60);
+            // 
+            // TsbCerrar
+            // 
+            this.TsbCerrar.AutoSize = false;
+            this.TsbCerrar.Image = ((System.Drawing.Image)(resources.GetObject("TsbCerrar.Image")));
+            this.TsbCerrar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.TsbCerrar.Name = "TsbCerrar";
+            this.TsbCerrar.Size = new System.Drawing.Size(150, 60);
+            this.TsbCerrar.Text = "Cerrar";
+            this.TsbCerrar.Click += new System.EventHandler(this.TsbCerrar_Click);
+            // 
+            // Tss4
+            // 
+            this.Tss4.Name = "Tss4";
+            this.Tss4.Size = new System.Drawing.Size(6, 60);
+            // 
+            // PnlFotografia
+            // 
+            this.PnlFotografia.BackColor = System.Drawing.Color.White;
+            this.PnlFotografia.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PnlFotografia.BackgroundImage")));
+            this.PnlFotografia.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PnlFotografia.Dock = System.Windows.Forms.DockStyle.Left;
+            this.PnlFotografia.Location = new System.Drawing.Point(0, 88);
+            this.PnlFotografia.Name = "PnlFotografia";
+            this.PnlFotografia.Size = new System.Drawing.Size(200, 659);
+            this.PnlFotografia.TabIndex = 3;
+            // 
+            // TbcPrincipal
+            // 
+            this.TbcPrincipal.Controls.Add(this.TpgClientes);
+            this.TbcPrincipal.Controls.Add(this.TpgReservaciones);
+            this.TbcPrincipal.Controls.Add(this.TpgInventario);
+            this.TbcPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TbcPrincipal.ItemSize = new System.Drawing.Size(150, 35);
+            this.TbcPrincipal.Location = new System.Drawing.Point(200, 88);
+            this.TbcPrincipal.Name = "TbcPrincipal";
+            this.TbcPrincipal.SelectedIndex = 0;
+            this.TbcPrincipal.Size = new System.Drawing.Size(982, 659);
+            this.TbcPrincipal.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.TbcPrincipal.TabIndex = 4;
+            // 
+            // TpgClientes
+            // 
+            this.TpgClientes.Controls.Add(this.LblEstadoCivil);
+            this.TpgClientes.Controls.Add(this.CbxEstadoCivil);
+            this.TpgClientes.Controls.Add(this.TbxLugarProcedencia);
+            this.TpgClientes.Controls.Add(this.LblLugarProcedencia);
+            this.TpgClientes.Controls.Add(this.TbxFechaNacimiento);
+            this.TpgClientes.Controls.Add(this.LblFechaNacimiento);
+            this.TpgClientes.Controls.Add(this.TbxCodigo);
+            this.TpgClientes.Controls.Add(this.LblCodigo);
+            this.TpgClientes.Controls.Add(this.TbxApellidoM);
+            this.TpgClientes.Controls.Add(this.TbxCorreo);
+            this.TpgClientes.Controls.Add(this.LblCorreo);
+            this.TpgClientes.Controls.Add(this.TbxTelefonoMovil);
+            this.TpgClientes.Controls.Add(this.LblTelefonoMovil);
+            this.TpgClientes.Controls.Add(this.LblApellidoM);
+            this.TpgClientes.Controls.Add(this.TbxApellidoP);
+            this.TpgClientes.Controls.Add(this.LblApellidoP);
+            this.TpgClientes.Controls.Add(this.TbxNombre);
+            this.TpgClientes.Controls.Add(this.LblNombre);
+            this.TpgClientes.Controls.Add(this.PbxFondoClientes);
+            this.TpgClientes.Location = new System.Drawing.Point(4, 39);
+            this.TpgClientes.Name = "TpgClientes";
+            this.TpgClientes.Padding = new System.Windows.Forms.Padding(3);
+            this.TpgClientes.Size = new System.Drawing.Size(974, 616);
+            this.TpgClientes.TabIndex = 0;
+            this.TpgClientes.Text = "Clientes";
+            this.TpgClientes.UseVisualStyleBackColor = true;
+            // 
+            // LblEstadoCivil
+            // 
+            this.LblEstadoCivil.AutoSize = true;
+            this.LblEstadoCivil.ForeColor = System.Drawing.Color.DimGray;
+            this.LblEstadoCivil.Location = new System.Drawing.Point(23, 271);
+            this.LblEstadoCivil.Name = "LblEstadoCivil";
+            this.LblEstadoCivil.Size = new System.Drawing.Size(81, 17);
+            this.LblEstadoCivil.TabIndex = 19;
+            this.LblEstadoCivil.Text = "Estado Civil";
+            // 
+            // CbxEstadoCivil
+            // 
+            this.CbxEstadoCivil.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CbxEstadoCivil.FormattingEnabled = true;
+            this.CbxEstadoCivil.Items.AddRange(new object[] {
+            "Soltero(a)",
+            "Casado(a)"});
+            this.CbxEstadoCivil.Location = new System.Drawing.Point(26, 295);
+            this.CbxEstadoCivil.Name = "CbxEstadoCivil";
+            this.CbxEstadoCivil.Size = new System.Drawing.Size(181, 24);
+            this.CbxEstadoCivil.TabIndex = 18;
+            // 
+            // TbxLugarProcedencia
+            // 
+            this.TbxLugarProcedencia.Location = new System.Drawing.Point(233, 228);
+            this.TbxLugarProcedencia.Name = "TbxLugarProcedencia";
+            this.TbxLugarProcedencia.Size = new System.Drawing.Size(340, 22);
+            this.TbxLugarProcedencia.TabIndex = 17;
+            // 
+            // LblLugarProcedencia
+            // 
+            this.LblLugarProcedencia.AutoSize = true;
+            this.LblLugarProcedencia.ForeColor = System.Drawing.Color.DimGray;
+            this.LblLugarProcedencia.Location = new System.Drawing.Point(230, 207);
+            this.LblLugarProcedencia.Name = "LblLugarProcedencia";
+            this.LblLugarProcedencia.Size = new System.Drawing.Size(148, 17);
+            this.LblLugarProcedencia.TabIndex = 16;
+            this.LblLugarProcedencia.Text = "Lugar de Procedencia";
+            // 
+            // TbxFechaNacimiento
+            // 
+            this.TbxFechaNacimiento.Location = new System.Drawing.Point(26, 228);
+            this.TbxFechaNacimiento.Name = "TbxFechaNacimiento";
+            this.TbxFechaNacimiento.Size = new System.Drawing.Size(181, 22);
+            this.TbxFechaNacimiento.TabIndex = 15;
+            // 
+            // LblFechaNacimiento
+            // 
+            this.LblFechaNacimiento.AutoSize = true;
+            this.LblFechaNacimiento.ForeColor = System.Drawing.Color.DimGray;
+            this.LblFechaNacimiento.Location = new System.Drawing.Point(23, 207);
+            this.LblFechaNacimiento.Name = "LblFechaNacimiento";
+            this.LblFechaNacimiento.Size = new System.Drawing.Size(141, 17);
+            this.LblFechaNacimiento.TabIndex = 14;
+            this.LblFechaNacimiento.Text = "Fecha de Nacimiento";
+            // 
+            // TbxCodigo
+            // 
+            this.TbxCodigo.Location = new System.Drawing.Point(26, 56);
+            this.TbxCodigo.Name = "TbxCodigo";
+            this.TbxCodigo.Size = new System.Drawing.Size(181, 22);
+            this.TbxCodigo.TabIndex = 13;
+            // 
+            // LblCodigo
+            // 
+            this.LblCodigo.AutoSize = true;
+            this.LblCodigo.ForeColor = System.Drawing.Color.DimGray;
+            this.LblCodigo.Location = new System.Drawing.Point(23, 35);
+            this.LblCodigo.Name = "LblCodigo";
+            this.LblCodigo.Size = new System.Drawing.Size(52, 17);
+            this.LblCodigo.TabIndex = 12;
+            this.LblCodigo.Text = "Código";
+            // 
+            // TbxApellidoM
+            // 
+            this.TbxApellidoM.Location = new System.Drawing.Point(597, 111);
+            this.TbxApellidoM.Name = "TbxApellidoM";
+            this.TbxApellidoM.Size = new System.Drawing.Size(231, 22);
+            this.TbxApellidoM.TabIndex = 11;
+            // 
+            // TbxCorreo
+            // 
+            this.TbxCorreo.Location = new System.Drawing.Point(233, 170);
+            this.TbxCorreo.Name = "TbxCorreo";
+            this.TbxCorreo.Size = new System.Drawing.Size(340, 22);
+            this.TbxCorreo.TabIndex = 10;
+            // 
+            // LblCorreo
+            // 
+            this.LblCorreo.AutoSize = true;
+            this.LblCorreo.ForeColor = System.Drawing.Color.DimGray;
+            this.LblCorreo.Location = new System.Drawing.Point(230, 149);
+            this.LblCorreo.Name = "LblCorreo";
+            this.LblCorreo.Size = new System.Drawing.Size(51, 17);
+            this.LblCorreo.TabIndex = 9;
+            this.LblCorreo.Text = "Correo";
+            // 
+            // TbxTelefonoMovil
+            // 
+            this.TbxTelefonoMovil.Location = new System.Drawing.Point(26, 170);
+            this.TbxTelefonoMovil.Name = "TbxTelefonoMovil";
+            this.TbxTelefonoMovil.Size = new System.Drawing.Size(181, 22);
+            this.TbxTelefonoMovil.TabIndex = 8;
+            // 
+            // LblTelefonoMovil
+            // 
+            this.LblTelefonoMovil.AutoSize = true;
+            this.LblTelefonoMovil.ForeColor = System.Drawing.Color.DimGray;
+            this.LblTelefonoMovil.Location = new System.Drawing.Point(23, 149);
+            this.LblTelefonoMovil.Name = "LblTelefonoMovil";
+            this.LblTelefonoMovil.Size = new System.Drawing.Size(100, 17);
+            this.LblTelefonoMovil.TabIndex = 7;
+            this.LblTelefonoMovil.Text = "Teléfono Móvil";
+            // 
+            // LblApellidoM
+            // 
+            this.LblApellidoM.AutoSize = true;
+            this.LblApellidoM.ForeColor = System.Drawing.Color.DimGray;
+            this.LblApellidoM.Location = new System.Drawing.Point(594, 90);
+            this.LblApellidoM.Name = "LblApellidoM";
+            this.LblApellidoM.Size = new System.Drawing.Size(114, 17);
+            this.LblApellidoM.TabIndex = 5;
+            this.LblApellidoM.Text = "Apellido Materno";
+            // 
+            // TbxApellidoP
+            // 
+            this.TbxApellidoP.Location = new System.Drawing.Point(342, 111);
+            this.TbxApellidoP.Name = "TbxApellidoP";
+            this.TbxApellidoP.Size = new System.Drawing.Size(231, 22);
+            this.TbxApellidoP.TabIndex = 4;
+            // 
+            // LblApellidoP
+            // 
+            this.LblApellidoP.AutoSize = true;
+            this.LblApellidoP.ForeColor = System.Drawing.Color.DimGray;
+            this.LblApellidoP.Location = new System.Drawing.Point(339, 90);
+            this.LblApellidoP.Name = "LblApellidoP";
+            this.LblApellidoP.Size = new System.Drawing.Size(112, 17);
+            this.LblApellidoP.TabIndex = 3;
+            this.LblApellidoP.Text = "Apellido Paterno";
+            // 
+            // TbxNombre
+            // 
+            this.TbxNombre.Location = new System.Drawing.Point(26, 111);
+            this.TbxNombre.Name = "TbxNombre";
+            this.TbxNombre.Size = new System.Drawing.Size(293, 22);
+            this.TbxNombre.TabIndex = 2;
+            // 
+            // LblNombre
+            // 
+            this.LblNombre.AutoSize = true;
+            this.LblNombre.ForeColor = System.Drawing.Color.DimGray;
+            this.LblNombre.Location = new System.Drawing.Point(23, 90);
+            this.LblNombre.Name = "LblNombre";
+            this.LblNombre.Size = new System.Drawing.Size(75, 17);
+            this.LblNombre.TabIndex = 1;
+            this.LblNombre.Text = "Nombre(s)";
+            // 
+            // PbxFondoClientes
+            // 
+            this.PbxFondoClientes.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PbxFondoClientes.BackgroundImage")));
+            this.PbxFondoClientes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PbxFondoClientes.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.PbxFondoClientes.Location = new System.Drawing.Point(3, 423);
+            this.PbxFondoClientes.Name = "PbxFondoClientes";
+            this.PbxFondoClientes.Size = new System.Drawing.Size(968, 190);
+            this.PbxFondoClientes.TabIndex = 0;
+            this.PbxFondoClientes.TabStop = false;
+            // 
+            // TpgReservaciones
+            // 
+            this.TpgReservaciones.Controls.Add(this.PbxFondoReservaciones);
+            this.TpgReservaciones.Location = new System.Drawing.Point(4, 39);
+            this.TpgReservaciones.Name = "TpgReservaciones";
+            this.TpgReservaciones.Padding = new System.Windows.Forms.Padding(3);
+            this.TpgReservaciones.Size = new System.Drawing.Size(974, 616);
+            this.TpgReservaciones.TabIndex = 1;
+            this.TpgReservaciones.Text = "Reservaciones";
+            this.TpgReservaciones.UseVisualStyleBackColor = true;
+            // 
+            // PbxFondoReservaciones
+            // 
+            this.PbxFondoReservaciones.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PbxFondoReservaciones.BackgroundImage")));
+            this.PbxFondoReservaciones.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PbxFondoReservaciones.Location = new System.Drawing.Point(691, 385);
+            this.PbxFondoReservaciones.Name = "PbxFondoReservaciones";
+            this.PbxFondoReservaciones.Size = new System.Drawing.Size(220, 200);
+            this.PbxFondoReservaciones.TabIndex = 0;
+            this.PbxFondoReservaciones.TabStop = false;
+            // 
+            // TpgInventario
+            // 
+            this.TpgInventario.Location = new System.Drawing.Point(4, 39);
+            this.TpgInventario.Name = "TpgInventario";
+            this.TpgInventario.Size = new System.Drawing.Size(974, 616);
+            this.TpgInventario.TabIndex = 2;
+            this.TpgInventario.Text = "Inventario";
+            this.TpgInventario.UseVisualStyleBackColor = true;
             // 
             // DlgProyectoFinal
             // 
@@ -403,28 +493,28 @@ namespace WindowsFormsControlLibrary1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(66)))), ((int)(((byte)(89)))));
             this.ClientSize = new System.Drawing.Size(1182, 773);
-            this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.statusStrip1);
-            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.TbcPrincipal);
+            this.Controls.Add(this.PnlFotografia);
+            this.Controls.Add(this.TstPrincipal);
+            this.Controls.Add(this.SstEstado);
+            this.Controls.Add(this.MstPrincipal);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MainMenuStrip = this.menuStrip1;
+            this.MainMenuStrip = this.MstPrincipal;
             this.Name = "DlgProyectoFinal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema de Gestión de Cabañas - San Sebastián";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.MstPrincipal.ResumeLayout(false);
+            this.MstPrincipal.PerformLayout();
+            this.SstEstado.ResumeLayout(false);
+            this.SstEstado.PerformLayout();
+            this.TstPrincipal.ResumeLayout(false);
+            this.TstPrincipal.PerformLayout();
+            this.TbcPrincipal.ResumeLayout(false);
+            this.TpgClientes.ResumeLayout(false);
+            this.TpgClientes.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PbxFondoClientes)).EndInit();
+            this.TpgReservaciones.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PbxFondoReservaciones)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -432,40 +522,48 @@ namespace WindowsFormsControlLibrary1
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem nuevoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem guardarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem verToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
-        private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
-        private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripButton toolStripButton4;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.MenuStrip MstPrincipal;
+        private System.Windows.Forms.ToolStripMenuItem MitArchivo;
+        private System.Windows.Forms.ToolStripMenuItem MitNuevo;
+        private System.Windows.Forms.ToolStripMenuItem MitGuardar;
+        private System.Windows.Forms.ToolStripMenuItem MitEditar;
+        private System.Windows.Forms.ToolStripMenuItem MitVer;
+        private System.Windows.Forms.ToolStripMenuItem MitAyuda;
+        private System.Windows.Forms.StatusStrip SstEstado;
+        private System.Windows.Forms.ToolStripStatusLabel TsslProyecto;
+        private System.Windows.Forms.ToolStrip TstPrincipal;
+        private System.Windows.Forms.ToolStripButton TsbNuevo;
+        private System.Windows.Forms.ToolStripButton TsbGuardar;
+        private System.Windows.Forms.ToolStripButton TsbEliminar;
+        private System.Windows.Forms.ToolStripSeparator Tss1;
+        private System.Windows.Forms.ToolStripSeparator Tss2;
+        private System.Windows.Forms.ToolStripSeparator Tss3;
+        private System.Windows.Forms.ToolStripButton TsbCerrar;
+        private System.Windows.Forms.Panel PnlFotografia;
+        private System.Windows.Forms.ToolStripSeparator Tss4;
+        private System.Windows.Forms.TabControl TbcPrincipal;
+        private System.Windows.Forms.TabPage TpgClientes;
+        private System.Windows.Forms.TabPage TpgReservaciones;
+        private System.Windows.Forms.TabPage TpgInventario;
+        private System.Windows.Forms.PictureBox PbxFondoClientes;
+        private System.Windows.Forms.TextBox TbxApellidoM;
+        private System.Windows.Forms.TextBox TbxCorreo;
+        private System.Windows.Forms.Label LblCorreo;
+        private System.Windows.Forms.TextBox TbxTelefonoMovil;
+        private System.Windows.Forms.Label LblTelefonoMovil;
+        private System.Windows.Forms.Label LblApellidoM;
+        private System.Windows.Forms.TextBox TbxApellidoP;
+        private System.Windows.Forms.Label LblApellidoP;
+        private System.Windows.Forms.TextBox TbxNombre;
+        private System.Windows.Forms.Label LblNombre;
+        private System.Windows.Forms.PictureBox PbxFondoReservaciones;
+        private System.Windows.Forms.Label LblEstadoCivil;
+        private System.Windows.Forms.ComboBox CbxEstadoCivil;
+        private System.Windows.Forms.TextBox TbxLugarProcedencia;
+        private System.Windows.Forms.Label LblLugarProcedencia;
+        private System.Windows.Forms.TextBox TbxFechaNacimiento;
+        private System.Windows.Forms.Label LblFechaNacimiento;
+        private System.Windows.Forms.TextBox TbxCodigo;
+        private System.Windows.Forms.Label LblCodigo;
     }
 }
