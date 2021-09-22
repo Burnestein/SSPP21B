@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System.Drawing;
+using System.Windows.Forms;
 
 namespace WindowsFormsControlLibrary1
 {
@@ -11,6 +12,11 @@ namespace WindowsFormsControlLibrary1
         //---------------------------------------------------------------------
         //Atributos.
         //---------------------------------------------------------------------
+        private Graphics AreaDibujoReservaciones;
+        private int X;
+        private int Y;
+        private bool Cambio = false;
+        private Color MiColor;
 
         //---------------------------------------------------------------------
         //Constructor.
@@ -18,6 +24,11 @@ namespace WindowsFormsControlLibrary1
         public DlgProyectoFinal()
         {
             InitializeComponent();
+
+            AreaDibujoReservaciones = TpgReservaciones.CreateGraphics();
+            X = 0;
+            Y = 0;
+            MiColor = Color.Blue;
         }
 
         //---------------------------------------------------------------------
@@ -59,6 +70,37 @@ namespace WindowsFormsControlLibrary1
         {
             MessageBox.Show("Registro eliminado.");
             TsbNuevo_Click(sender, e);
+        }
+
+        //---------------------------------------------------------------------
+        //Dibuja un cuadrado.
+        //---------------------------------------------------------------------
+        private void BtnDibujar_Click(object sender, System.EventArgs e)
+        {
+            CCuadrado MiCuadrado;
+
+            MiCuadrado = new CCuadrado(X, Y, 100, MiColor);
+            MiCuadrado.Dibuja(AreaDibujoReservaciones);
+            X = X + 3;
+
+            if (Cambio==false)
+            {
+                Y = Y + 3;
+            }
+            if (Y >= 100)
+            {
+                Cambio = true;
+                MiColor = Color.Red;
+            }
+            if (Cambio == true)
+            {
+                Y = Y - 3;
+            }
+            if (Y <= 0)
+            {
+                Cambio = false;
+                MiColor = Color.Blue;
+            }
         }
     }
 }

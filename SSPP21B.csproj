@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CColor.cs" />
+    <Compile Include="CCuadrado.cs" />
     <Compile Include="CLapiz.cs" />
     <Compile Include="DlgMenuPrincipal.cs">
       <SubType>Form</SubType>

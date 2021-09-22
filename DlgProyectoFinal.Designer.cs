@@ -73,6 +73,7 @@ namespace WindowsFormsControlLibrary1
             this.TpgReservaciones = new System.Windows.Forms.TabPage();
             this.PbxFondoReservaciones = new System.Windows.Forms.PictureBox();
             this.TpgInventario = new System.Windows.Forms.TabPage();
+            this.BtnDibujar = new System.Windows.Forms.Button();
             this.MstPrincipal.SuspendLayout();
             this.SstEstado.SuspendLayout();
             this.TstPrincipal.SuspendLayout();
@@ -459,6 +460,7 @@ namespace WindowsFormsControlLibrary1
             // 
             // TpgReservaciones
             // 
+            this.TpgReservaciones.Controls.Add(this.BtnDibujar);
             this.TpgReservaciones.Controls.Add(this.PbxFondoReservaciones);
             this.TpgReservaciones.Location = new System.Drawing.Point(4, 39);
             this.TpgReservaciones.Name = "TpgReservaciones";
@@ -486,6 +488,16 @@ namespace WindowsFormsControlLibrary1
             this.TpgInventario.TabIndex = 2;
             this.TpgInventario.Text = "Inventario";
             this.TpgInventario.UseVisualStyleBackColor = true;
+            // 
+            // BtnDibujar
+            // 
+            this.BtnDibujar.Location = new System.Drawing.Point(691, 321);
+            this.BtnDibujar.Name = "BtnDibujar";
+            this.BtnDibujar.Size = new System.Drawing.Size(220, 48);
+            this.BtnDibujar.TabIndex = 1;
+            this.BtnDibujar.Text = "Dibujar";
+            this.BtnDibujar.UseVisualStyleBackColor = true;
+            this.BtnDibujar.Click += new System.EventHandler(this.BtnDibujar_Click);
             // 
             // DlgProyectoFinal
             // 
@@ -565,5 +577,6 @@ namespace WindowsFormsControlLibrary1
         private System.Windows.Forms.Label LblFechaNacimiento;
         private System.Windows.Forms.TextBox TbxCodigo;
         private System.Windows.Forms.Label LblCodigo;
+        private System.Windows.Forms.Button BtnDibujar;
     }
 }
