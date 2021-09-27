@@ -87,7 +87,7 @@ namespace WindowsFormsControlLibrary1
             {
                 Y = Y + 3;
             }
-            if (Y >= 100)
+            if (Y >= 390)
             {
                 Cambio = true;
                 MiColor = Color.Red;
@@ -101,6 +101,32 @@ namespace WindowsFormsControlLibrary1
                 Cambio = false;
                 MiColor = Color.Blue;
             }
+        }
+
+        //---------------------------------------------------------------------
+        //Dibuja un circulo.
+        //---------------------------------------------------------------------
+        private void BtnDibujarCirculo_Click(object sender, System.EventArgs e)
+        {
+            CCirculo MiCirculo;
+            Color MiColor;
+
+            MiColor = Color.Black;
+            MiCirculo = new CCirculo(200+X, 110, 90, MiColor);
+            MiCirculo.Dibuja(TpgReservaciones.CreateGraphics());
+
+            MiColor = Color.Blue;
+            MiCirculo = new CCirculo(212+X, 122, 50, MiColor);
+            MiCirculo.Dibuja(TpgReservaciones.CreateGraphics());
+
+            MiColor = Color.Orange;
+            MiCirculo = new CCirculo(313, 150+Y, 30, MiColor);
+            MiCirculo.Dibuja(TpgReservaciones.CreateGraphics());
+
+            MiColor = Color.Red;
+            MiCirculo = new CCirculo(230, 90+Y, 110, MiColor);
+            MiCirculo.Dibuja(TpgReservaciones.CreateGraphics());
+
         }
     }
 }

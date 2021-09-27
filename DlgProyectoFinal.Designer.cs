@@ -71,9 +71,10 @@ namespace WindowsFormsControlLibrary1
             this.LblNombre = new System.Windows.Forms.Label();
             this.PbxFondoClientes = new System.Windows.Forms.PictureBox();
             this.TpgReservaciones = new System.Windows.Forms.TabPage();
+            this.BtnDibujarCirculo = new System.Windows.Forms.Button();
+            this.BtnDibujarCuadrado = new System.Windows.Forms.Button();
             this.PbxFondoReservaciones = new System.Windows.Forms.PictureBox();
             this.TpgInventario = new System.Windows.Forms.TabPage();
-            this.BtnDibujar = new System.Windows.Forms.Button();
             this.MstPrincipal.SuspendLayout();
             this.SstEstado.SuspendLayout();
             this.TstPrincipal.SuspendLayout();
@@ -460,7 +461,8 @@ namespace WindowsFormsControlLibrary1
             // 
             // TpgReservaciones
             // 
-            this.TpgReservaciones.Controls.Add(this.BtnDibujar);
+            this.TpgReservaciones.Controls.Add(this.BtnDibujarCirculo);
+            this.TpgReservaciones.Controls.Add(this.BtnDibujarCuadrado);
             this.TpgReservaciones.Controls.Add(this.PbxFondoReservaciones);
             this.TpgReservaciones.Location = new System.Drawing.Point(4, 39);
             this.TpgReservaciones.Name = "TpgReservaciones";
@@ -469,6 +471,26 @@ namespace WindowsFormsControlLibrary1
             this.TpgReservaciones.TabIndex = 1;
             this.TpgReservaciones.Text = "Reservaciones";
             this.TpgReservaciones.UseVisualStyleBackColor = true;
+            // 
+            // BtnDibujarCirculo
+            // 
+            this.BtnDibujarCirculo.Location = new System.Drawing.Point(691, 257);
+            this.BtnDibujarCirculo.Name = "BtnDibujarCirculo";
+            this.BtnDibujarCirculo.Size = new System.Drawing.Size(220, 48);
+            this.BtnDibujarCirculo.TabIndex = 2;
+            this.BtnDibujarCirculo.Text = "Dibujar Círculo";
+            this.BtnDibujarCirculo.UseVisualStyleBackColor = true;
+            this.BtnDibujarCirculo.Click += new System.EventHandler(this.BtnDibujarCirculo_Click);
+            // 
+            // BtnDibujarCuadrado
+            // 
+            this.BtnDibujarCuadrado.Location = new System.Drawing.Point(691, 321);
+            this.BtnDibujarCuadrado.Name = "BtnDibujarCuadrado";
+            this.BtnDibujarCuadrado.Size = new System.Drawing.Size(220, 48);
+            this.BtnDibujarCuadrado.TabIndex = 1;
+            this.BtnDibujarCuadrado.Text = "Dibujar Cuadrado";
+            this.BtnDibujarCuadrado.UseVisualStyleBackColor = true;
+            this.BtnDibujarCuadrado.Click += new System.EventHandler(this.BtnDibujar_Click);
             // 
             // PbxFondoReservaciones
             // 
@@ -484,20 +506,10 @@ namespace WindowsFormsControlLibrary1
             // 
             this.TpgInventario.Location = new System.Drawing.Point(4, 39);
             this.TpgInventario.Name = "TpgInventario";
-            this.TpgInventario.Size = new System.Drawing.Size(974, 616);
+            this.TpgInventario.Size = new System.Drawing.Size(974, 614);
             this.TpgInventario.TabIndex = 2;
             this.TpgInventario.Text = "Inventario";
             this.TpgInventario.UseVisualStyleBackColor = true;
-            // 
-            // BtnDibujar
-            // 
-            this.BtnDibujar.Location = new System.Drawing.Point(691, 321);
-            this.BtnDibujar.Name = "BtnDibujar";
-            this.BtnDibujar.Size = new System.Drawing.Size(220, 48);
-            this.BtnDibujar.TabIndex = 1;
-            this.BtnDibujar.Text = "Dibujar";
-            this.BtnDibujar.UseVisualStyleBackColor = true;
-            this.BtnDibujar.Click += new System.EventHandler(this.BtnDibujar_Click);
             // 
             // DlgProyectoFinal
             // 
@@ -577,6 +589,7 @@ namespace WindowsFormsControlLibrary1
         private System.Windows.Forms.Label LblFechaNacimiento;
         private System.Windows.Forms.TextBox TbxCodigo;
         private System.Windows.Forms.Label LblCodigo;
-        private System.Windows.Forms.Button BtnDibujar;
+        private System.Windows.Forms.Button BtnDibujarCuadrado;
+        private System.Windows.Forms.Button BtnDibujarCirculo;
     }
 }
