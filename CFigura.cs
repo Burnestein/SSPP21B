@@ -1,43 +1,45 @@
 ﻿using System.Drawing;
-using System;
 
 namespace WindowsFormsControlLibrary1
 {
     //---------------------------------------------------------------------
-    //Clase que representa un circulo.
-    //NJSA. 27/09/2021.
+    //Clase padre de todas las figuras geométricas.
+    //NJSA. 29/09/2021.
     //---------------------------------------------------------------------
-    public class CCirculo : CFigura
+    public class CFigura
     {
         //---------------------------------------------------------------------
         //Atributos.
         //---------------------------------------------------------------------
-        private int Radio;
+        protected Pen Lapiz;
+        protected string Nombre;
+        protected Color Color;
+        protected int X;
+        protected int Y;
 
         //---------------------------------------------------------------------
         //Constructor.
         //---------------------------------------------------------------------
-        public CCirculo(int X, int Y, int Radio, Color Color) : base(X, Y, Color)
+        public CFigura(int X, int Y, Color Color)
         {
-            this.Radio = Radio;
-            Nombre = "circulo";
-            Lapiz = new Pen(Color, 3);
+            this.X = X;
+            this.Y = Y;
+            this.Color = Color;
+        }
+        //---------------------------------------------------------------------
+        //Obtiene el nombre de la figura.
+        //---------------------------------------------------------------------
+        public string GetNombre()
+        {
+            return Nombre;
         }
 
         //---------------------------------------------------------------------
-        //Calcula el área del círculo.
+        //Obtiene el color de la figura.
         //---------------------------------------------------------------------
-        public double CalculaArea()
+        public Color GetColor()
         {
-            return Math.PI * Radio * Radio;
-        }
-
-        //---------------------------------------------------------------------
-        //Dibuja el círculo.
-        //---------------------------------------------------------------------
-        public void Dibuja(Graphics AreaDibujo)
-        {
-            AreaDibujo.DrawEllipse(Lapiz, X, Y, Radio*2, Radio*2);
+            return Color;
         }
     }
 }
