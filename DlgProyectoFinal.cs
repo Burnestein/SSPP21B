@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using SSPP21B;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace WindowsFormsControlLibrary1
@@ -127,6 +128,24 @@ namespace WindowsFormsControlLibrary1
             MiCirculo = new CCirculo(230, 90+Y, 110, MiColor);
             MiCirculo.Dibuja(TpgReservaciones.CreateGraphics());
 
+        }
+
+        //---------------------------------------------------------------------
+        //Dibuja un rectangulo.
+        //---------------------------------------------------------------------
+        private void BtnDibujarRectangulo_Click(object sender, System.EventArgs e)
+        {
+            CRectangulo MiRectangulo;
+            Graphics Lienzo;
+            CColor MiColor;
+            Color ColorPrimitivo;
+
+            Lienzo = TpgReservaciones.CreateGraphics();
+            MiColor = new CColor(255, 0, 0);
+            ColorPrimitivo = MiColor.GetColorPrimitivo();
+
+            MiRectangulo = new CRectangulo(X + 50,Y + 50,250,50,ColorPrimitivo);
+            MiRectangulo.Dibuja(Lienzo);
         }
     }
 }

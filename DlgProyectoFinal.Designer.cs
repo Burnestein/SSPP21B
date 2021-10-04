@@ -75,6 +75,7 @@ namespace WindowsFormsControlLibrary1
             this.BtnDibujarCuadrado = new System.Windows.Forms.Button();
             this.PbxFondoReservaciones = new System.Windows.Forms.PictureBox();
             this.TpgInventario = new System.Windows.Forms.TabPage();
+            this.BtnDibujarRectangulo = new System.Windows.Forms.Button();
             this.MstPrincipal.SuspendLayout();
             this.SstEstado.SuspendLayout();
             this.TstPrincipal.SuspendLayout();
@@ -461,6 +462,7 @@ namespace WindowsFormsControlLibrary1
             // 
             // TpgReservaciones
             // 
+            this.TpgReservaciones.Controls.Add(this.BtnDibujarRectangulo);
             this.TpgReservaciones.Controls.Add(this.BtnDibujarCirculo);
             this.TpgReservaciones.Controls.Add(this.BtnDibujarCuadrado);
             this.TpgReservaciones.Controls.Add(this.PbxFondoReservaciones);
@@ -510,6 +512,16 @@ namespace WindowsFormsControlLibrary1
             this.TpgInventario.TabIndex = 2;
             this.TpgInventario.Text = "Inventario";
             this.TpgInventario.UseVisualStyleBackColor = true;
+            // 
+            // BtnDibujarRectangulo
+            // 
+            this.BtnDibujarRectangulo.Location = new System.Drawing.Point(691, 191);
+            this.BtnDibujarRectangulo.Name = "BtnDibujarRectangulo";
+            this.BtnDibujarRectangulo.Size = new System.Drawing.Size(220, 48);
+            this.BtnDibujarRectangulo.TabIndex = 3;
+            this.BtnDibujarRectangulo.Text = "Dibujar Rectangulo";
+            this.BtnDibujarRectangulo.UseVisualStyleBackColor = true;
+            this.BtnDibujarRectangulo.Click += new System.EventHandler(this.BtnDibujarRectangulo_Click);
             // 
             // DlgProyectoFinal
             // 
@@ -591,5 +603,6 @@ namespace WindowsFormsControlLibrary1
         private System.Windows.Forms.Label LblCodigo;
         private System.Windows.Forms.Button BtnDibujarCuadrado;
         private System.Windows.Forms.Button BtnDibujarCirculo;
+        private System.Windows.Forms.Button BtnDibujarRectangulo;
     }
 }

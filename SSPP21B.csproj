@@ -47,6 +47,7 @@
     <Compile Include="CCuadrado.cs" />
     <Compile Include="CFigura.cs" />
     <Compile Include="CLapiz.cs" />
+    <Compile Include="CRectangulo.cs" />
     <Compile Include="DlgMenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
