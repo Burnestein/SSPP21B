@@ -1,4 +1,5 @@
 ﻿using SSPP21B;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -146,6 +147,40 @@ namespace WindowsFormsControlLibrary1
 
             MiRectangulo = new CRectangulo(X + 50,Y + 50,250,50,ColorPrimitivo);
             MiRectangulo.Dibuja(Lienzo);
+        }
+
+        //---------------------------------------------------------------------
+        //Dibuja un polígono.
+        //---------------------------------------------------------------------
+        private void BtnDibujarPoligono_Click(object sender, System.EventArgs e)
+        {
+            CPoligono MiPoligono;
+            Graphics Lienzo;
+            Point[] Puntos;
+            Point[] PuntosFor;
+
+            Puntos = new Point[]
+            {
+                new Point {X=10, Y=50},
+                new Point {X=110, Y=50},
+                new Point {X=26, Y=104},
+                new Point {X=60, Y=20},
+                new Point {X=94, Y=106}
+            };
+
+            PuntosFor = new Point[10];
+            for (int i=0; i<10; i++)
+            {
+                PuntosFor[i] = new Point { X= (int)Math.Pow(2,i), Y = i * i};
+            };
+
+            Lienzo = TpgReservaciones.CreateGraphics();
+
+            MiPoligono = new CPoligono(Puntos, Color.Purple);
+            MiPoligono.Dibuja(Lienzo);
+
+            MiPoligono = new CPoligono(PuntosFor, Color.Orange);
+            MiPoligono.Dibuja(Lienzo);
         }
     }
 }

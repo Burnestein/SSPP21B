@@ -71,11 +71,12 @@ namespace WindowsFormsControlLibrary1
             this.LblNombre = new System.Windows.Forms.Label();
             this.PbxFondoClientes = new System.Windows.Forms.PictureBox();
             this.TpgReservaciones = new System.Windows.Forms.TabPage();
+            this.BtnDibujarRectangulo = new System.Windows.Forms.Button();
             this.BtnDibujarCirculo = new System.Windows.Forms.Button();
             this.BtnDibujarCuadrado = new System.Windows.Forms.Button();
             this.PbxFondoReservaciones = new System.Windows.Forms.PictureBox();
             this.TpgInventario = new System.Windows.Forms.TabPage();
-            this.BtnDibujarRectangulo = new System.Windows.Forms.Button();
+            this.BtnDibujarPoligono = new System.Windows.Forms.Button();
             this.MstPrincipal.SuspendLayout();
             this.SstEstado.SuspendLayout();
             this.TstPrincipal.SuspendLayout();
@@ -96,7 +97,7 @@ namespace WindowsFormsControlLibrary1
             this.MitAyuda});
             this.MstPrincipal.Location = new System.Drawing.Point(0, 0);
             this.MstPrincipal.Name = "MstPrincipal";
-            this.MstPrincipal.Size = new System.Drawing.Size(1182, 28);
+            this.MstPrincipal.Size = new System.Drawing.Size(1182, 30);
             this.MstPrincipal.TabIndex = 0;
             this.MstPrincipal.Text = "menuStrip1";
             // 
@@ -106,7 +107,7 @@ namespace WindowsFormsControlLibrary1
             this.MitNuevo,
             this.MitGuardar});
             this.MitArchivo.Name = "MitArchivo";
-            this.MitArchivo.Size = new System.Drawing.Size(73, 24);
+            this.MitArchivo.Size = new System.Drawing.Size(73, 26);
             this.MitArchivo.Text = "Archivo";
             // 
             // MitNuevo
@@ -124,19 +125,19 @@ namespace WindowsFormsControlLibrary1
             // MitEditar
             // 
             this.MitEditar.Name = "MitEditar";
-            this.MitEditar.Size = new System.Drawing.Size(62, 24);
+            this.MitEditar.Size = new System.Drawing.Size(62, 26);
             this.MitEditar.Text = "Editar";
             // 
             // MitVer
             // 
             this.MitVer.Name = "MitVer";
-            this.MitVer.Size = new System.Drawing.Size(44, 24);
+            this.MitVer.Size = new System.Drawing.Size(44, 26);
             this.MitVer.Text = "Ver";
             // 
             // MitAyuda
             // 
             this.MitAyuda.Name = "MitAyuda";
-            this.MitAyuda.Size = new System.Drawing.Size(65, 24);
+            this.MitAyuda.Size = new System.Drawing.Size(65, 26);
             this.MitAyuda.Text = "Ayuda";
             // 
             // SstEstado
@@ -171,7 +172,7 @@ namespace WindowsFormsControlLibrary1
             this.Tss3,
             this.TsbCerrar,
             this.Tss4});
-            this.TstPrincipal.Location = new System.Drawing.Point(0, 28);
+            this.TstPrincipal.Location = new System.Drawing.Point(0, 30);
             this.TstPrincipal.Name = "TstPrincipal";
             this.TstPrincipal.Size = new System.Drawing.Size(1182, 60);
             this.TstPrincipal.TabIndex = 2;
@@ -243,9 +244,9 @@ namespace WindowsFormsControlLibrary1
             this.PnlFotografia.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PnlFotografia.BackgroundImage")));
             this.PnlFotografia.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.PnlFotografia.Dock = System.Windows.Forms.DockStyle.Left;
-            this.PnlFotografia.Location = new System.Drawing.Point(0, 88);
+            this.PnlFotografia.Location = new System.Drawing.Point(0, 90);
             this.PnlFotografia.Name = "PnlFotografia";
-            this.PnlFotografia.Size = new System.Drawing.Size(200, 659);
+            this.PnlFotografia.Size = new System.Drawing.Size(200, 657);
             this.PnlFotografia.TabIndex = 3;
             // 
             // TbcPrincipal
@@ -255,10 +256,10 @@ namespace WindowsFormsControlLibrary1
             this.TbcPrincipal.Controls.Add(this.TpgInventario);
             this.TbcPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TbcPrincipal.ItemSize = new System.Drawing.Size(150, 35);
-            this.TbcPrincipal.Location = new System.Drawing.Point(200, 88);
+            this.TbcPrincipal.Location = new System.Drawing.Point(200, 90);
             this.TbcPrincipal.Name = "TbcPrincipal";
             this.TbcPrincipal.SelectedIndex = 0;
-            this.TbcPrincipal.Size = new System.Drawing.Size(982, 659);
+            this.TbcPrincipal.Size = new System.Drawing.Size(982, 657);
             this.TbcPrincipal.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.TbcPrincipal.TabIndex = 4;
             // 
@@ -462,6 +463,7 @@ namespace WindowsFormsControlLibrary1
             // 
             // TpgReservaciones
             // 
+            this.TpgReservaciones.Controls.Add(this.BtnDibujarPoligono);
             this.TpgReservaciones.Controls.Add(this.BtnDibujarRectangulo);
             this.TpgReservaciones.Controls.Add(this.BtnDibujarCirculo);
             this.TpgReservaciones.Controls.Add(this.BtnDibujarCuadrado);
@@ -469,10 +471,20 @@ namespace WindowsFormsControlLibrary1
             this.TpgReservaciones.Location = new System.Drawing.Point(4, 39);
             this.TpgReservaciones.Name = "TpgReservaciones";
             this.TpgReservaciones.Padding = new System.Windows.Forms.Padding(3);
-            this.TpgReservaciones.Size = new System.Drawing.Size(974, 616);
+            this.TpgReservaciones.Size = new System.Drawing.Size(974, 614);
             this.TpgReservaciones.TabIndex = 1;
             this.TpgReservaciones.Text = "Reservaciones";
             this.TpgReservaciones.UseVisualStyleBackColor = true;
+            // 
+            // BtnDibujarRectangulo
+            // 
+            this.BtnDibujarRectangulo.Location = new System.Drawing.Point(691, 191);
+            this.BtnDibujarRectangulo.Name = "BtnDibujarRectangulo";
+            this.BtnDibujarRectangulo.Size = new System.Drawing.Size(220, 48);
+            this.BtnDibujarRectangulo.TabIndex = 3;
+            this.BtnDibujarRectangulo.Text = "Dibujar Rectangulo";
+            this.BtnDibujarRectangulo.UseVisualStyleBackColor = true;
+            this.BtnDibujarRectangulo.Click += new System.EventHandler(this.BtnDibujarRectangulo_Click);
             // 
             // BtnDibujarCirculo
             // 
@@ -508,20 +520,20 @@ namespace WindowsFormsControlLibrary1
             // 
             this.TpgInventario.Location = new System.Drawing.Point(4, 39);
             this.TpgInventario.Name = "TpgInventario";
-            this.TpgInventario.Size = new System.Drawing.Size(974, 614);
+            this.TpgInventario.Size = new System.Drawing.Size(974, 616);
             this.TpgInventario.TabIndex = 2;
             this.TpgInventario.Text = "Inventario";
             this.TpgInventario.UseVisualStyleBackColor = true;
             // 
-            // BtnDibujarRectangulo
+            // BtnDibujarPoligono
             // 
-            this.BtnDibujarRectangulo.Location = new System.Drawing.Point(691, 191);
-            this.BtnDibujarRectangulo.Name = "BtnDibujarRectangulo";
-            this.BtnDibujarRectangulo.Size = new System.Drawing.Size(220, 48);
-            this.BtnDibujarRectangulo.TabIndex = 3;
-            this.BtnDibujarRectangulo.Text = "Dibujar Rectangulo";
-            this.BtnDibujarRectangulo.UseVisualStyleBackColor = true;
-            this.BtnDibujarRectangulo.Click += new System.EventHandler(this.BtnDibujarRectangulo_Click);
+            this.BtnDibujarPoligono.Location = new System.Drawing.Point(691, 125);
+            this.BtnDibujarPoligono.Name = "BtnDibujarPoligono";
+            this.BtnDibujarPoligono.Size = new System.Drawing.Size(220, 48);
+            this.BtnDibujarPoligono.TabIndex = 4;
+            this.BtnDibujarPoligono.Text = "Dibujar Polígono";
+            this.BtnDibujarPoligono.UseVisualStyleBackColor = true;
+            this.BtnDibujarPoligono.Click += new System.EventHandler(this.BtnDibujarPoligono_Click);
             // 
             // DlgProyectoFinal
             // 
@@ -604,5 +616,6 @@ namespace WindowsFormsControlLibrary1
         private System.Windows.Forms.Button BtnDibujarCuadrado;
         private System.Windows.Forms.Button BtnDibujarCirculo;
         private System.Windows.Forms.Button BtnDibujarRectangulo;
+        private System.Windows.Forms.Button BtnDibujarPoligono;
     }
 }
