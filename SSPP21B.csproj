@@ -46,6 +46,7 @@
     <Compile Include="CColor.cs" />
     <Compile Include="CCuadrado.cs" />
     <Compile Include="CFigura.cs" />
+    <Compile Include="CGeneradorArchivo.cs" />
     <Compile Include="CLapiz.cs" />
     <Compile Include="CPoligono.cs" />
     <Compile Include="CRectangulo.cs" />

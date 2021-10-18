@@ -182,5 +182,27 @@ namespace WindowsFormsControlLibrary1
             MiPoligono = new CPoligono(PuntosFor, Color.Orange);
             MiPoligono.Dibuja(Lienzo);
         }
+
+        //---------------------------------------------------------------------
+        //Genera un archivo de texto.
+        //---------------------------------------------------------------------
+        private void BtnGeneraArchivo_Click(object sender, EventArgs e)
+        {
+            CGeneradorArchivo MiGenerador;
+            bool Resultado;
+
+            MiGenerador = new CGeneradorArchivo("C:\\Users\\burn_\\Desktop\\", "Prueba.txt");
+            MiGenerador.SetContenido("Hola mundo, mi primer archivo de texto desde C sharp.");
+            Resultado = MiGenerador.Guarda();
+
+            if (Resultado)
+            {
+                MessageBox.Show("El archivo se ha generado con éxito.");
+            }
+            else
+            {
+                MessageBox.Show("Ocurrió un error al generar el archivo.");
+            }
+        }
     }
 }
