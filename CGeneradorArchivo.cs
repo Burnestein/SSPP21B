@@ -39,6 +39,7 @@ namespace WindowsFormsControlLibrary1
         public bool Guarda()
         {
             bool Exito;
+
             try
             {
                 using (StreamWriter sw = File.CreateText(Ruta + Nombre))

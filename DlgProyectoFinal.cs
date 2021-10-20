@@ -191,8 +191,25 @@ namespace WindowsFormsControlLibrary1
             CGeneradorArchivo MiGenerador;
             bool Resultado;
 
-            MiGenerador = new CGeneradorArchivo("C:\\Users\\burn_\\Desktop\\", "Prueba.txt");
-            MiGenerador.SetContenido("Hola mundo, mi primer archivo de texto desde C sharp.");
+            MiGenerador = new CGeneradorArchivo("C:\\Users\\burn_\\Desktop\\", "Prueba.kml");
+            MiGenerador.SetContenido(
+                "<?xml version = \"1.0\" encoding = \"UTF-8\" ?>\n"+
+                "<kml xmlns = \"http://www.opengis.net/kml/2.2\">\n"+
+                "  <Placemark>\n"+
+                "    <name>\n"+
+                "       Nemesis Jessiel Sierra Aranda\n" +
+                "    </name>\n" +
+                "    <description>\n"+
+                "       Hola. Soy estudiante de ingenieria en computación en el CUC, Puerto vallarta, Jalisco.\n" +
+                "    </description>\n" +
+                "    <Point>\n"+
+                "      <coordinates>\n"+
+                "       -116.53855,51.44007,0\n" +
+                "      </coordinates>\n" +
+                "    </Point>\n"+
+                "  </Placemark>\n"+
+                "</kml>"
+                );
             Resultado = MiGenerador.Guarda();
 
             if (Resultado)
