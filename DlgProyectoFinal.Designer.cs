@@ -51,6 +51,7 @@ namespace WindowsFormsControlLibrary1
             this.PnlFotografia = new System.Windows.Forms.Panel();
             this.TbcPrincipal = new System.Windows.Forms.TabControl();
             this.TpgClientes = new System.Windows.Forms.TabPage();
+            this.BtnGeneraArchivo = new System.Windows.Forms.Button();
             this.LblEstadoCivil = new System.Windows.Forms.Label();
             this.CbxEstadoCivil = new System.Windows.Forms.ComboBox();
             this.TbxLugarProcedencia = new System.Windows.Forms.TextBox();
@@ -77,7 +78,16 @@ namespace WindowsFormsControlLibrary1
             this.BtnDibujarCuadrado = new System.Windows.Forms.Button();
             this.PbxFondoReservaciones = new System.Windows.Forms.PictureBox();
             this.TpgInventario = new System.Windows.Forms.TabPage();
-            this.BtnGeneraArchivo = new System.Windows.Forms.Button();
+            this.BtnGeneraKML = new System.Windows.Forms.Button();
+            this.TbxLugar = new System.Windows.Forms.TextBox();
+            this.LblLugar = new System.Windows.Forms.Label();
+            this.TbxLongitud = new System.Windows.Forms.TextBox();
+            this.LblLongitud = new System.Windows.Forms.Label();
+            this.TbxLatitud = new System.Windows.Forms.TextBox();
+            this.LblLatitud = new System.Windows.Forms.Label();
+            this.TbxDescripcion = new System.Windows.Forms.TextBox();
+            this.LblDescripcion = new System.Windows.Forms.Label();
+            this.BtnObtenerCoordenadas = new System.Windows.Forms.Button();
             this.MstPrincipal.SuspendLayout();
             this.SstEstado.SuspendLayout();
             this.TstPrincipal.SuspendLayout();
@@ -86,6 +96,7 @@ namespace WindowsFormsControlLibrary1
             ((System.ComponentModel.ISupportInitialize)(this.PbxFondoClientes)).BeginInit();
             this.TpgReservaciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbxFondoReservaciones)).BeginInit();
+            this.TpgInventario.SuspendLayout();
             this.SuspendLayout();
             // 
             // MstPrincipal
@@ -293,6 +304,16 @@ namespace WindowsFormsControlLibrary1
             this.TpgClientes.TabIndex = 0;
             this.TpgClientes.Text = "Clientes";
             this.TpgClientes.UseVisualStyleBackColor = true;
+            // 
+            // BtnGeneraArchivo
+            // 
+            this.BtnGeneraArchivo.Location = new System.Drawing.Point(687, 170);
+            this.BtnGeneraArchivo.Name = "BtnGeneraArchivo";
+            this.BtnGeneraArchivo.Size = new System.Drawing.Size(141, 80);
+            this.BtnGeneraArchivo.TabIndex = 20;
+            this.BtnGeneraArchivo.Text = "Generar Archivo";
+            this.BtnGeneraArchivo.UseVisualStyleBackColor = true;
+            this.BtnGeneraArchivo.Click += new System.EventHandler(this.BtnGeneraArchivo_Click);
             // 
             // LblEstadoCivil
             // 
@@ -530,22 +551,109 @@ namespace WindowsFormsControlLibrary1
             // 
             // TpgInventario
             // 
+            this.TpgInventario.Controls.Add(this.BtnObtenerCoordenadas);
+            this.TpgInventario.Controls.Add(this.BtnGeneraKML);
+            this.TpgInventario.Controls.Add(this.TbxLugar);
+            this.TpgInventario.Controls.Add(this.LblLugar);
+            this.TpgInventario.Controls.Add(this.TbxLongitud);
+            this.TpgInventario.Controls.Add(this.LblLongitud);
+            this.TpgInventario.Controls.Add(this.TbxLatitud);
+            this.TpgInventario.Controls.Add(this.LblLatitud);
+            this.TpgInventario.Controls.Add(this.TbxDescripcion);
+            this.TpgInventario.Controls.Add(this.LblDescripcion);
             this.TpgInventario.Location = new System.Drawing.Point(4, 39);
             this.TpgInventario.Name = "TpgInventario";
-            this.TpgInventario.Size = new System.Drawing.Size(974, 614);
+            this.TpgInventario.Size = new System.Drawing.Size(974, 616);
             this.TpgInventario.TabIndex = 2;
             this.TpgInventario.Text = "Inventario";
             this.TpgInventario.UseVisualStyleBackColor = true;
             // 
-            // BtnGeneraArchivo
+            // BtnGeneraKML
             // 
-            this.BtnGeneraArchivo.Location = new System.Drawing.Point(687, 170);
-            this.BtnGeneraArchivo.Name = "BtnGeneraArchivo";
-            this.BtnGeneraArchivo.Size = new System.Drawing.Size(141, 80);
-            this.BtnGeneraArchivo.TabIndex = 20;
-            this.BtnGeneraArchivo.Text = "Generar Archivo";
-            this.BtnGeneraArchivo.UseVisualStyleBackColor = true;
-            this.BtnGeneraArchivo.Click += new System.EventHandler(this.BtnGeneraArchivo_Click);
+            this.BtnGeneraKML.Location = new System.Drawing.Point(48, 233);
+            this.BtnGeneraKML.Name = "BtnGeneraKML";
+            this.BtnGeneraKML.Size = new System.Drawing.Size(141, 80);
+            this.BtnGeneraKML.TabIndex = 22;
+            this.BtnGeneraKML.Text = "Genera KML";
+            this.BtnGeneraKML.UseVisualStyleBackColor = true;
+            this.BtnGeneraKML.Click += new System.EventHandler(this.BtnGeneraKML_Click);
+            // 
+            // TbxLugar
+            // 
+            this.TbxLugar.Location = new System.Drawing.Point(48, 64);
+            this.TbxLugar.Name = "TbxLugar";
+            this.TbxLugar.Size = new System.Drawing.Size(378, 22);
+            this.TbxLugar.TabIndex = 21;
+            // 
+            // LblLugar
+            // 
+            this.LblLugar.AutoSize = true;
+            this.LblLugar.ForeColor = System.Drawing.Color.DimGray;
+            this.LblLugar.Location = new System.Drawing.Point(45, 43);
+            this.LblLugar.Name = "LblLugar";
+            this.LblLugar.Size = new System.Drawing.Size(45, 17);
+            this.LblLugar.TabIndex = 20;
+            this.LblLugar.Text = "Lugar";
+            // 
+            // TbxLongitud
+            // 
+            this.TbxLongitud.Location = new System.Drawing.Point(303, 183);
+            this.TbxLongitud.Name = "TbxLongitud";
+            this.TbxLongitud.Size = new System.Drawing.Size(231, 22);
+            this.TbxLongitud.TabIndex = 19;
+            // 
+            // LblLongitud
+            // 
+            this.LblLongitud.AutoSize = true;
+            this.LblLongitud.ForeColor = System.Drawing.Color.DimGray;
+            this.LblLongitud.Location = new System.Drawing.Point(300, 162);
+            this.LblLongitud.Name = "LblLongitud";
+            this.LblLongitud.Size = new System.Drawing.Size(63, 17);
+            this.LblLongitud.TabIndex = 18;
+            this.LblLongitud.Text = "Longitud";
+            // 
+            // TbxLatitud
+            // 
+            this.TbxLatitud.Location = new System.Drawing.Point(48, 183);
+            this.TbxLatitud.Name = "TbxLatitud";
+            this.TbxLatitud.Size = new System.Drawing.Size(231, 22);
+            this.TbxLatitud.TabIndex = 17;
+            // 
+            // LblLatitud
+            // 
+            this.LblLatitud.AutoSize = true;
+            this.LblLatitud.ForeColor = System.Drawing.Color.DimGray;
+            this.LblLatitud.Location = new System.Drawing.Point(45, 162);
+            this.LblLatitud.Name = "LblLatitud";
+            this.LblLatitud.Size = new System.Drawing.Size(51, 17);
+            this.LblLatitud.TabIndex = 16;
+            this.LblLatitud.Text = "Latitud";
+            // 
+            // TbxDescripcion
+            // 
+            this.TbxDescripcion.Location = new System.Drawing.Point(48, 119);
+            this.TbxDescripcion.Name = "TbxDescripcion";
+            this.TbxDescripcion.Size = new System.Drawing.Size(486, 22);
+            this.TbxDescripcion.TabIndex = 15;
+            // 
+            // LblDescripcion
+            // 
+            this.LblDescripcion.AutoSize = true;
+            this.LblDescripcion.ForeColor = System.Drawing.Color.DimGray;
+            this.LblDescripcion.Location = new System.Drawing.Point(45, 98);
+            this.LblDescripcion.Name = "LblDescripcion";
+            this.LblDescripcion.Size = new System.Drawing.Size(82, 17);
+            this.LblDescripcion.TabIndex = 14;
+            this.LblDescripcion.Text = "Descripción";
+            // 
+            // BtnObtenerCoordenadas
+            // 
+            this.BtnObtenerCoordenadas.Location = new System.Drawing.Point(570, 179);
+            this.BtnObtenerCoordenadas.Name = "BtnObtenerCoordenadas";
+            this.BtnObtenerCoordenadas.Size = new System.Drawing.Size(187, 30);
+            this.BtnObtenerCoordenadas.TabIndex = 23;
+            this.BtnObtenerCoordenadas.Text = "Obtener Coordenadas";
+            this.BtnObtenerCoordenadas.UseVisualStyleBackColor = true;
             // 
             // DlgProyectoFinal
             // 
@@ -575,6 +683,8 @@ namespace WindowsFormsControlLibrary1
             ((System.ComponentModel.ISupportInitialize)(this.PbxFondoClientes)).EndInit();
             this.TpgReservaciones.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PbxFondoReservaciones)).EndInit();
+            this.TpgInventario.ResumeLayout(false);
+            this.TpgInventario.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -630,5 +740,15 @@ namespace WindowsFormsControlLibrary1
         private System.Windows.Forms.Button BtnDibujarRectangulo;
         private System.Windows.Forms.Button BtnDibujarPoligono;
         private System.Windows.Forms.Button BtnGeneraArchivo;
+        private System.Windows.Forms.TextBox TbxLugar;
+        private System.Windows.Forms.Label LblLugar;
+        private System.Windows.Forms.TextBox TbxLongitud;
+        private System.Windows.Forms.Label LblLongitud;
+        private System.Windows.Forms.TextBox TbxLatitud;
+        private System.Windows.Forms.Label LblLatitud;
+        private System.Windows.Forms.TextBox TbxDescripcion;
+        private System.Windows.Forms.Label LblDescripcion;
+        private System.Windows.Forms.Button BtnGeneraKML;
+        private System.Windows.Forms.Button BtnObtenerCoordenadas;
     }
 }
