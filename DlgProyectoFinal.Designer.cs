@@ -78,6 +78,7 @@ namespace WindowsFormsControlLibrary1
             this.BtnDibujarCuadrado = new System.Windows.Forms.Button();
             this.PbxFondoReservaciones = new System.Windows.Forms.PictureBox();
             this.TpgInventario = new System.Windows.Forms.TabPage();
+            this.BtnObtenerCoordenadas = new System.Windows.Forms.Button();
             this.BtnGeneraKML = new System.Windows.Forms.Button();
             this.TbxLugar = new System.Windows.Forms.TextBox();
             this.LblLugar = new System.Windows.Forms.Label();
@@ -87,7 +88,6 @@ namespace WindowsFormsControlLibrary1
             this.LblLatitud = new System.Windows.Forms.Label();
             this.TbxDescripcion = new System.Windows.Forms.TextBox();
             this.LblDescripcion = new System.Windows.Forms.Label();
-            this.BtnObtenerCoordenadas = new System.Windows.Forms.Button();
             this.MstPrincipal.SuspendLayout();
             this.SstEstado.SuspendLayout();
             this.TstPrincipal.SuspendLayout();
@@ -494,7 +494,7 @@ namespace WindowsFormsControlLibrary1
             this.TpgReservaciones.Location = new System.Drawing.Point(4, 39);
             this.TpgReservaciones.Name = "TpgReservaciones";
             this.TpgReservaciones.Padding = new System.Windows.Forms.Padding(3);
-            this.TpgReservaciones.Size = new System.Drawing.Size(974, 614);
+            this.TpgReservaciones.Size = new System.Drawing.Size(974, 616);
             this.TpgReservaciones.TabIndex = 1;
             this.TpgReservaciones.Text = "Reservaciones";
             this.TpgReservaciones.UseVisualStyleBackColor = true;
@@ -567,6 +567,16 @@ namespace WindowsFormsControlLibrary1
             this.TpgInventario.TabIndex = 2;
             this.TpgInventario.Text = "Inventario";
             this.TpgInventario.UseVisualStyleBackColor = true;
+            // 
+            // BtnObtenerCoordenadas
+            // 
+            this.BtnObtenerCoordenadas.Location = new System.Drawing.Point(570, 171);
+            this.BtnObtenerCoordenadas.Name = "BtnObtenerCoordenadas";
+            this.BtnObtenerCoordenadas.Size = new System.Drawing.Size(187, 47);
+            this.BtnObtenerCoordenadas.TabIndex = 23;
+            this.BtnObtenerCoordenadas.Text = "Obtener Coordenadas";
+            this.BtnObtenerCoordenadas.UseVisualStyleBackColor = true;
+            this.BtnObtenerCoordenadas.Click += new System.EventHandler(this.BtnObtenerCoordenadas_Click);
             // 
             // BtnGeneraKML
             // 
@@ -645,15 +655,6 @@ namespace WindowsFormsControlLibrary1
             this.LblDescripcion.Size = new System.Drawing.Size(82, 17);
             this.LblDescripcion.TabIndex = 14;
             this.LblDescripcion.Text = "Descripción";
-            // 
-            // BtnObtenerCoordenadas
-            // 
-            this.BtnObtenerCoordenadas.Location = new System.Drawing.Point(570, 179);
-            this.BtnObtenerCoordenadas.Name = "BtnObtenerCoordenadas";
-            this.BtnObtenerCoordenadas.Size = new System.Drawing.Size(187, 30);
-            this.BtnObtenerCoordenadas.TabIndex = 23;
-            this.BtnObtenerCoordenadas.Text = "Obtener Coordenadas";
-            this.BtnObtenerCoordenadas.UseVisualStyleBackColor = true;
             // 
             // DlgProyectoFinal
             // 

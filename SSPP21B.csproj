@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="CCirculo.cs" />
     <Compile Include="CColor.cs" />
+    <Compile Include="CCoordenadasGeo.cs" />
     <Compile Include="CCuadrado.cs" />
     <Compile Include="CFigura.cs" />
     <Compile Include="CGeneradorArchivo.cs" />

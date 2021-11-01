@@ -229,5 +229,16 @@ namespace WindowsFormsControlLibrary1
                 MessageBox.Show("Ocurrió un error al generar el archivo.");
             }
         }
+
+        //---------------------------------------------------------------------
+        //Obtiene las coordenadas geográficas de un lugar.
+        //---------------------------------------------------------------------
+        private void BtnObtenerCoordenadas_Click(object sender, EventArgs e)
+        {
+            CCoordenadasGeo MiCoordenadasGeo;
+
+            MiCoordenadasGeo = new CCoordenadasGeo(TbxLugar.Text);
+            MiCoordenadasGeo.GetCoordenada(1);
+        }
     }
 }
