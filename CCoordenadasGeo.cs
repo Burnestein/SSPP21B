@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Net.Http;
-using System.Windows.Forms;
+using System.Threading.Tasks;
 using System.Xml;
 
 namespace WindowsFormsControlLibrary1
@@ -14,34 +14,42 @@ namespace WindowsFormsControlLibrary1
         //---------------------------------------------------------------------
         //Atributos.
         //---------------------------------------------------------------------
+        private string Llave;
         private string Lugar;
-        public string Contenido;
+        public string Descripcion;
+        public string Latitud;
+        public string Longitud;
 
         //---------------------------------------------------------------------
         //Constructor.
         //---------------------------------------------------------------------
         public CCoordenadasGeo(string Lugar)
         {
+            //Recibe parámetros.
             this.Lugar = Lugar;
+
+            //inicializa la llave de acceso a los servicios de geolocalización de Google.
+
+            Llave = "AIzaSyCdUe6rwa9wdPN_me-2aZpYH772GTdz9ME";
+
         }
 
         //---------------------------------------------------------------------
-        //Obtiene una coordenada de el lugar.
-        //TipoCoordenada = 1, obtiene latitud.
-        //TipoCoordenada = 2, obtiene longitud.
+        //Obtiene las coordenadas y descripcion de el lugar.
+        //NOTA: Al finalizar el método, las coordenadas estarán almacenadas en
+        //los atributos: Latitud y Longitud. (Se ejecutará de forma asíncrona).
         //---------------------------------------------------------------------
-        public async void GetCoordenada(int TipoCoordenada)
+        public async Task GetCoordenadas()
         {
             HttpClient clienteHttp;
             Uri direccion;
             HttpResponseMessage respuestaHttp;
             string contenidoHttp;
             XmlDocument documentoXML;
-            string Llave;
             XmlNodeList elemList;
             XmlElement bookElement;
 
-            Llave = "AIzaSyCdUe6rwa9wdPN_me-2aZpYH772GTdz9ME";
+            //Consulta la API de geolocalización de google maps.
 
             clienteHttp = new HttpClient();
             direccion = new Uri("https://maps.googleapis.com/maps/api/geocode/");//Api de mapas de google
@@ -50,13 +58,20 @@ namespace WindowsFormsControlLibrary1
             respuestaHttp = await clienteHttp.GetAsync("xml?address=" + Lugar + "&key=" + Llave);
             contenidoHttp = await respuestaHttp.Content.ReadAsStringAsync();
 
+            //Extrae el formatted_address, la latitud y la longitud del XML.
+
             documentoXML = new XmlDocument();
             documentoXML.LoadXml(contenidoHttp);
 
+            elemList = documentoXML.GetElementsByTagName("formatted_address");
+            bookElement = (XmlElement)elemList[0];
+            Descripcion = bookElement.InnerText;
+
             elemList = documentoXML.GetElementsByTagName("location");//Busca la etiqueta 
             bookElement = (XmlElement)elemList[0];
-            MessageBox.Show(bookElement["lat"].InnerText);
-            MessageBox.Show(bookElement["lng"].InnerText);
+            Latitud = bookElement["lat"].InnerText;
+            Longitud = bookElement["lng"].InnerText;
+
         }
     }
 }

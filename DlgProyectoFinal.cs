@@ -233,12 +233,16 @@ namespace WindowsFormsControlLibrary1
         //---------------------------------------------------------------------
         //Obtiene las coordenadas geográficas de un lugar.
         //---------------------------------------------------------------------
-        private void BtnObtenerCoordenadas_Click(object sender, EventArgs e)
+        private async void BtnObtenerCoordenadas_Click(object sender, EventArgs e)
         {
             CCoordenadasGeo MiCoordenadasGeo;
 
             MiCoordenadasGeo = new CCoordenadasGeo(TbxLugar.Text);
-            MiCoordenadasGeo.GetCoordenada(1);
+            await MiCoordenadasGeo.GetCoordenadas();
+
+            TbxDescripcion.Text = MiCoordenadasGeo.Descripcion;
+            TbxLatitud.Text = MiCoordenadasGeo.Latitud;
+            TbxLongitud.Text = MiCoordenadasGeo.Longitud;
         }
     }
 }
