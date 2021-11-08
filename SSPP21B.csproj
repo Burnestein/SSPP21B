@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CCalculadoraFinancieraVPN.cs" />
     <Compile Include="CCirculo.cs" />
     <Compile Include="CColor.cs" />
     <Compile Include="CCoordenadasGeo.cs" />
