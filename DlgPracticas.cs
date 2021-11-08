@@ -65,5 +65,35 @@ namespace SSPP21B
                 MiMenuPrincipal.Show();
             }
         }
+
+        //---------------------------------------------------------------------
+        //Botón de prácticas 4.
+        //---------------------------------------------------------------------
+        private void BtnCalculaVPN_Click(object sender, EventArgs e)
+        {
+            double[] FlujosFUturos = { 50000, 100000, 150000, 200000, 100000 };
+            double Resultado;
+
+            CCalculadoraFinancieraVPN MiCalculadoraVPN = new CCalculadoraFinancieraVPN(500000, 8, FlujosFUturos);
+            
+            Resultado = MiCalculadoraVPN.CalculaVPN();
+            MessageBox.Show("El resultado del método VPN = " + Resultado);
+
+            if (Resultado < 0)
+            {
+                MessageBox.Show("El proyecto de debe rechazar.");
+            }
+            else
+            {
+                if (Resultado > 0)
+                {
+                    MessageBox.Show("El proyecto de aprueba.");
+                }
+                else
+                {
+                    MessageBox.Show("El proyecto es indiferente.");
+                }
+            }
+        }
     }
 }
